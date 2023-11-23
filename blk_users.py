@@ -1,4 +1,3 @@
-import sys
 import gitlab
 
 HOST = '192.168.136.15'

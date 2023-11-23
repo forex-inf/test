@@ -8,7 +8,7 @@ gl = gitlab.Gitlab(url=f'http://{HOST}/', private_token=TOKEN)
 for row in gl.users.list():
     if(not row.is_admin):
         try:
-            gl.users.get(row.id).unblock()
+            gl.users.get(row.id).block()
             print(f'User: {row.username} was blocked.\n')
         except:
             print(f'User: {row.username} was not blocked, error.\n')
